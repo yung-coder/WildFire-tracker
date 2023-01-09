@@ -3,7 +3,9 @@ import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import { motion } from "framer-motion";
 import { staggerContainer } from "../utils/motions";
 import MarkerClusterGroup from "@changey/react-leaflet-markercluster";
-const Maps = () => {
+
+const NATURAL_EVENT_WILDFIRE = 8;
+const Maps = ({ fireData }) => {
   return (
     <section className="py-16">
       <motion.div
@@ -24,9 +26,21 @@ const Maps = () => {
           />
 
           <MarkerClusterGroup>
-            <Marker position={[49.8397, 24.0297]} />
-            <Marker position={[52.2297, 21.0122]} />
-            <Marker position={[51.5074, -0.0901]} />
+            {fireData.map((ev, index) => {
+              if (ev.categories[0].id === NATURAL_EVENT_WILDFIRE) {
+                return (
+                  <Marker
+                    key={index}
+                    position={[
+                      ev.geometries[0].coordinates[1],
+                      ev.geometries[0].coordinates[0],
+                    ]}
+                  />
+                );
+              } else {
+                return null;
+              }
+            })}
           </MarkerClusterGroup>
         </MapContainer>
       </motion.div>
