@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { staggerContainer, textVariant } from "../utils/motions";
+import { staggerContainer, textVariant, fadeIn } from "../utils/motions";
 import { TypingText } from "./TypingText";
 
 const HomeScreen = () => {
@@ -12,7 +12,7 @@ const HomeScreen = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
-          className="flex flex-col justify-between items-center"
+          className="flex flex-col mx-auto justify-between items-center"
         >
           <div className="flex flex-col justify-center items-center ">
             <motion.h1
@@ -22,6 +22,14 @@ const HomeScreen = () => {
               Welcome
             </motion.h1>
             <TypingText title="WILD FIRE TRACKER" />
+            <div className="mt-24">
+              <motion.img
+                variants={fadeIn("up", "tween", 0.3, 1)}
+                src="/arrow-down.svg"
+                alt="arrow down"
+                className="w-[148px] h-[28px] object-contain mt-[28px]"
+              />
+            </div>
           </div>
         </motion.div>
       </section>
