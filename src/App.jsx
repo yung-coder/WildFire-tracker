@@ -15,7 +15,7 @@ function App() {
   return (
     <div>
       <div className="relative">
-        <div className="bg border">
+        <div className="bg">
           <HomeScreen />
         </div>
         <Maps fireData={fireData} />
