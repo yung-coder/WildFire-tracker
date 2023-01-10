@@ -7,7 +7,6 @@ function App() {
   const [fireData, setfiredata] = useState([]);
   useEffect(() => {
     axios.get("https://eonet.gsfc.nasa.gov/api/v2.1/events").then((res) => {
-      console.log(res.data.events);
       setfiredata(res.data.events);
     });
   }, []);

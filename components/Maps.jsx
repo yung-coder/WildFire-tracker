@@ -40,6 +40,9 @@ const Maps = ({ fireData }) => {
                         ev.geometries[0].coordinates[1],
                         ev.geometries[0].coordinates[0],
                       ]}
+                      onClick={() =>
+                        setlocation({ id: ev.id, title: ev.title })
+                      }
                     />
                   );
                 } else {
