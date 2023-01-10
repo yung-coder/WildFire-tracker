@@ -6,7 +6,7 @@ import { TypingText } from "./TypingText";
 const HomeScreen = () => {
   return (
     <>
-      <section className=" flex justify-center items-center sm:py-[15%] py-40 xs:py-8  sm:pl-16 pl-6">
+      <section className="backdrop-blur-[3px] relative z-10 flex justify-center items-center sm:py-[15%] py-40 xs:py-8  sm:pl-16 pl-6">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -17,7 +17,7 @@ const HomeScreen = () => {
           <div className="flex flex-col justify-center items-center ">
             <motion.h1
               variants={textVariant(0.1)}
-              className="font-bold lg:text-[70px] md:text-[80px] sm:text-[30px] lg:leading-[158.4px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] uppercase text-white"
+              className="font-bold lg:text-[70px] md:text-[80px] sm:text-[30px] text-[40px] lg:leading-[158.4px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] uppercase text-white"
             >
               Welcome
             </motion.h1>

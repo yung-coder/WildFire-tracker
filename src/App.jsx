@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import HomeScreen from "../components/HomeScreen";
 import Maps from "../components/Maps";
 import axios from "axios";
+import './index.css';
 function App() {
   const [fireData, setfiredata] = useState([]);
   useEffect(() => {
@@ -14,8 +15,9 @@ function App() {
   return (
     <div>
       <div className="relative">
-        <div className="absolute w-[100%] bottom-[80%]  inset-0 gradient-01 z-0" />
-        <HomeScreen   />
+        <div className="bg border">
+          <HomeScreen />
+        </div>
         <Maps fireData={fireData} />
       </div>
     </div>

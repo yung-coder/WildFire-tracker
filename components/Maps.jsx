@@ -7,7 +7,7 @@ import MarkerClusterGroup from "@changey/react-leaflet-markercluster";
 const NATURAL_EVENT_WILDFIRE = 8;
 const Maps = ({ fireData }) => {
   return (
-    <section className="py-16">
+    <section className="  sm:p-[5%]">
       <motion.div
         variants={staggerContainer}
         initial="hidden"
